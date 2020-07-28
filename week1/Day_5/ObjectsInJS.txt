@@ -1,0 +1,42 @@
+Objects in Javascript
+
+In js almost everything is object,
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects
+Maths are always objects
+Regular expressions are always objects
+Arrays are always objects
+Functions are always objects
+Objects are always objects
+
+EXCEPT PRIMITIVE  DATATYPE everything is the Object.
+
+
+Objects are Variables:
+
+var person= "Satyam jagtap";
+
+Objects are variables too. But objects can contain many values.
+
+The values are written as key : value pairs.
+
+Object Literals:
+This is the easiest way to create a JavaScript Object.
+Using an object literal, you both define and create an object in one statement.
+An object literal is a list of name:value pairs (like age:50) inside curly braces {}.
+The following example creates a new JavaScript object with four properties:
+
+example:-
+var person ={firstname:"satyam",lastname:"jagtap",roll_no:22,age :22 };
+
+
+
+Using the JavaScript Keyword "new"
+
+var person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
