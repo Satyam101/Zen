@@ -1,0 +1,30 @@
+
+Enterprise Js Error Handling
+
+what does user see when there is JS error on web page ?
+Ans:-Nothing
+
+
+Error which are caught are considered as handled.
+
+ERROR LIFECYCE
+Error==>try-catch==>window.onerror==>Browser-Error
+
+
+# Errors are thrown in the low-level parts of the application
+-utilities,core libraries etc
+
+# Use try-catch blocks in higher level parts
+--application specific
+==client side business logic
+ 
+Non fatal Error
+wont interfere in user's main task
+affects only the portion of the page.
+Recovery is possible.
+
+fatal error
+The Application absolutely cannot continue.
+Other error will occur if the application continues.
+messages the user immediately.
+reload.
