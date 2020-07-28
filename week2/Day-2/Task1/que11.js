@@ -1,27 +1,20 @@
-var securityQuestions = [
-    {
-    question: "What was your first pet's name?",
-    expectedAnswer: "FlufferNutter"
-    },
-    {
-    question: "What was the model year of your first car?",
-    expectedAnswer: "1985"
-    },
-    {
-    question: "What city were you born in?",
-    expectedAnswer: "NYC"
-    }
-   ]
-   function chksecurityQuestions(securityQuestions,question,ans) {
+var students = [
+    {name: "Siddharth Abhimanyu", age: 21}, { name: "Malar", age: 25},
+    {name: "Maari",age: 18},{name: "Bhallala Deva",age: 17},
+    {name: "Baahubali",age: 16},{name: "AAK chandran",age: 23},   {name:"Gabbar Singh",age: 33},{name: "Mogambo",age: 53},
+    {name: "Munnabhai",age: 40},{name: "Sher Khan",age: 20},
+    {name: "Chulbul Pandey",age: 19},{name: "Anthony",age: 28},
+    {name: "Devdas",age: 56} 
+    ];
+   function returnMinors(arr)
+   {
+       let output = [];
    
-       let isCorrect = false;
-       for(let i = 0 ; i < securityQuestions.length ; i++){
-           if(securityQuestions[i].question == question){
-               if(securityQuestions[i].expectedAnswer == ans){
-                   isCorrect = true;
-               }
+       for(let i = 0 ; i < students.length ; i++){
+           if( +(students[i].age) < 20){
+               output.push(students[i].name);
            }
-   
        }
-    return isCorrect; 
+       return output;
    }
+   console.log(returnMinors(students));
