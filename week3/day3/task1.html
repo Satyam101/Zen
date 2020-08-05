@@ -1,0 +1,84 @@
+
+<html>
+    <head>
+        <title>
+        Brochure
+        </title>
+        <style>
+          *{
+            max-width: 700px;
+            margin: auto;
+            
+          }
+    
+            .slantedDivA{
+          position: relative;
+          width: 100%;
+          height: 50vh;
+          background-color:aqua;
+          box-sizing: border-box;
+          padding: 30px;
+          color:cadetblue;
+          
+          
+        }
+    
+        .slantedDivA:after{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          content: '';
+          background: inherit;
+          z-index: -1;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          transform-origin: top right;
+          transform: skewY(-4deg);
+        }
+        
+        bg{
+          background-color:coral;
+        }
+        
+        </style>
+       <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        </head>
+    <body  >
+          <section style="border: 5px dotted white; border-top-left-radius: 30px; border-top-right-radius: 30px ; position: absolute; z-index: 99999; left: 450px;top: 20px; height: 2350px; width: 600px;">
+          </section>
+          <section style="background-color: FEE2CB; height: 2350px; font-family: 'Dancing Script'; font-size: 30px; text-align: center;" >
+            <div class="SlantedDivA" style="background-color: #E7DDD4; z-index: 9; border-radius: 20px; text-align: center;">
+              <span style="font-size: 60px;">S</span>CROLLING IN WEB DESIGN
+    
+            </div>
+            <div class="SlantedDivA" style="background-color:#271A30; z-index:8 ;">
+              Lorem ipsum dolor sit amet.
+    
+    
+            </div>
+            <div class="SlantedDivA" style="background-color:darkseagreen; z-index: 7;">
+              Lorem ipsum dolor sit amet.
+    
+    
+            </div>
+            <div class="SlantedDivA" style="background-color: fuchsia; z-index: 6;">
+              Lorem ipsum dolor sit amet.
+    
+    
+            </div>
+            <div class="SlantedDivA" style="background-color: #B5BAC1; z-index: 5;">
+              Lorem ipsum dolor sit amet.
+    
+    
+            </div>
+            <div class="SlantedDivA"  style="background-color: #FEE2CB; z-index: 4;">
+              Lorem ipsum dolor sit amet.
+    
+            </div>
+           
+        </section>
+        
+        </body>
+    </html>
