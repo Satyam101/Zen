@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+
+
+
+ .awesome {
+  padding: 10px;
+  background:grey;
+  color: white;
+  min-width: 30px;
+  text-align: center;
+}
+.inputtxt {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+
+}
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div style="background-color: lightgray; width: fit-content; margin-left: 400px; margin-top: 75px; padding-left: 15px; padding-right: 20px; padding-bottom: 3px; width:700px; padding-top: 30px;"> 
+           <form  onsubmit="f1()" >
+    <table class="my-contain" align="center"   border="0" >
+        <tr>
+            <td>Full Name</td>
+  <td colspan="3">
+<div class="input-container">
+    <i class="fa fa-user awesome" aria-hidden="true" id="inp1"></i>
+    
+    <input type="text" id="inp1" placeholder="Full Name" style="min-height: 30px; min-width: 200px;" required autofocus>
+    </div>
+    </td>
+    </tr>
+    
+    <tr>
+        <td style="padding-right: 300px;"><label>Address Line 1</label></td>
+<td colspan="3">
+<div class="input-container">
+    <i class="fa fa-address-book-o awesome" aria-hidden="true"></i>
+    <input type="text" id="inp2" placeholder="Address Line 1" style="min-height: 30px; min-width: 200px;" required>
+
+</div>
+</td>
+</tr>
+
+<tr>
+    <td style="padding-right: 200px;"><label>Address Line 2</label></td>
+<td colspan="3">
+<div class="input-container">
+    <i class="fa fa-address-book-o awesome" aria-hidden="true"></i>
+<input type="text" id="inp3" placeholder="Address Line 2" style="min-height: 30px; min-width: 200px;" required>
+
+</div>
+</td>
+</tr>
+<tr>
+    <td style="padding-right: 100px;">      <label>City</label></td>
+<td colspan="3">
+<div class="input-container">
+    <i class="fa fa-building-o awesome" aria-hidden="true"></i>
+<input type="text" id="inp4" placeholder="City" style="min-height: 30px; min-width: 200px;" required>
+
+</div>
+</td>
+</tr>
+
+<tr>
+    <td style="padding-right: 100px;"><label>State/Province/Region</label></td>
+<td colspan="3">
+<div class="input-container">
+    <i class="fa fa-map-marker awesome" aria-hidden="true"></i>
+<input type="text" id="inp5" placeholder="State/Province/Region" style="min-height: 30px; min-width: 200px;" required>
+
+</div>
+</td>
+</tr>
+
+<tr>
+    <td style="padding-right: 100px;">  <label>Postal Code/ZIP</label></td>
+<td colspan="3">
+<div class="input-container">
+    <i class="fa fa-envelope-open-o awesome" aria-hidden="true"></i>
+<input type="text" id="inp6" placeholder="Postal Code/ZIP" style="min-height: 30px; min-width: 200px;" required>
+
+</div>
+</td>
+</tr>
+<tr>
+    
+    <td style="padding-right: 100px;">  <label>Country</label></td>
+<td colspan="3">
+<div class="input-container">
+    <i class="fa fa-map-o  awesome" aria-hidden="true"></i>
+<select style="min-height: 30px; min-width: 200px;" >
+    <option value="M">Afganisthan</option>
+    <option value="1">India</option>
+    <option value="2">Australia</option>
+    <option value="3">China</option>
+    <option value="4">New Zealand</option>
+    <option value="5">France</option>
+    <option value="6">America</option>
+    <option value="7">Spain</option>
+    <option value="8">Russia</option>
+</select>
+</div>
+</td>
+</tr>
+
+<tr>
+    <td style="padding-right: 100px;">  <label>Email</label></td>
+<td colspan="3">
+<div class="input-container">
+<i class="fa fa-user awesome" aria-hidden="true" id="inp8"></i>
+<input type="text" id="inp8" placeholder="Email" style="min-height: 30px; min-width: 200px;" required>
+
+</div>
+</td>
+</tr>
+
+<tr>
+    <td>  <label>Phone Number</label></td>
+<td colspan="2">
+
+    <div class="input-container">
+        <i class="fa fa-user awesome" aria-hidden="true" id="inp8"></i>
+        <input class="inputtxt" type="text" placeholder="Phone Number" required>
+      </div>
+</td>
+
+</tr>
+
+<tr>
+    
+    <!-- <td> <input type="submit" value="Submit" style="margin-left: 300px; position:fixed"> </td> -->
+    <td><button style="margin-left: 300px;">Submit</button></td>
+</tr>
+
+
+</table>
+</form>
+<script>
+
+    function f1()
+    {
+        alert("Thank You");
+
+    }
+</script>
+</div>
+
+</body>
+</html>
