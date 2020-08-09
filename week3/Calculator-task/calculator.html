@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+    <style>
+         *{
+            background-color:black;
+        }
+        #b1{
+
+            background-color: black;
+            color: blue;
+            border-color: blue;
+            border-width: 1px;
+            padding: 10px;
+            min-width: 70px;
+            min-height: 70px;
+            font-size: 22px;
+            outline: none;
+        }
+
+        #b2{
+            margin-top: 1px;
+background-color: black;
+color: red;
+border-color: red;
+border-width: 1px;
+padding: 10px;
+min-width: 71px;
+min-height: 70px;
+font-size: 22px;
+outline: none;
+}
+#b3{
+
+    background-color: black;
+color: #0cf50c;
+border-color:green;
+border-width: 1.5px;
+padding: 10px;
+min-width: 50px;
+font-size: 22px;
+outline: none;
+}
+#b4{
+background-color: black;
+color: #0cf50c;
+border-color:green;
+border-width: 1.5px;
+padding: 10px;
+min-width: 146px;
+min-height: 70px;
+font-size: 22px;
+outline: none;
+margin-left: 19.9px; 
+}
+#b5{
+background-color: black;
+color: #0cf50c;
+border-color:green;
+border-width: 1.5px;
+padding: 10px;
+min-width: 144px;
+min-height: 70px;
+font-size: 22px;
+outline: none;
+}
+#b6{
+background-color: black;
+color: red;
+border-color:red;
+margin-bottom: 1px;
+border-width: 1px;
+padding: 10px;
+min-width: 145px;
+min-height: 70px;
+font-size: 22px;
+outline: none;
+margin-left: 20px;
+}
+#display{
+    
+    position: absolute;
+     margin-left:570px; 
+     margin-top: 90px;
+      background-color: black; 
+      outline: none;
+  border-color:hotpink;
+   border-width: 1.5px;
+    padding-left: 10px;
+     font-size: 25px;
+      color:mediumspringgreen;
+       min-width: 450px;
+        min-height: 50px;
+}
+#heading{
+background-color: navy;
+color: palegreen;
+text-align: center;
+margin-left: 30px;
+
+}
+
+    </style>
+</head>
+<body>
+    <div>
+    <h1 id="heading">CALCULATOR</h1>
+    <form name="calculator">
+<input type="text" id="display"  readonly  name="display"autofocus>
+<br><br><br>
+
+<input style="margin-top: 130px; margin-left: 600px;" type="button" id="b1" value="7" onclick="calculator.display.value+='7'">
+<input type="button" id="b1" value="8" onclick="calculator.display.value+='8'">
+<input type="button" id="b1" value="9" onclick="calculator.display.value+='9'">
+<input type="button" id="b6" value="clear" onclick="calculator.display.value=' '">
+
+
+
+<input style="margin-left: 600px; margin-top: 0px;" type="button" id="b1" value="4" onclick="calculator.display.value+='4'">
+<input type="button" id="b1" value="5" onclick="calculator.display.value+='5'">
+<input type="button" id="b1" value="6" onclick="calculator.display.value+='6'">
+<input style="margin-left: 20px;" type="button" id="b2" value="+" onclick="calculator.display.value+='+'">
+<input style="font-size: 25x; ;;" type="button" id="b2" value="-" onclick="calculator.display.value+='-'">
+
+
+
+<input style="margin-left: 600px;" type="button" id="b1" value="1" onclick="calculator.display.value+='1'">
+<input type="button" id="b1" value="2" onclick="calculator.display.value+='2'">
+<input type="button" id="b1" value="3" onclick="calculator.display.value+='3'">
+<input style="margin-left: 20px;padding-top: 10px;" type="button" id="b2" value="*" onclick="calculator.display.value+=' *'">
+<input type="button" id="b2" value="/" onclick="calculator.display.value+='/'">
+
+
+
+<input style="margin-left: 600px;" type="button" id="b1" value="0" onclick="calculator.display.value+='0'">
+<input  type="button" id="b5" value="00" onclick="calculator.display.value+='00'">
+<input  type="button" id="b4" value="=" onclick="calculator.display.value=eval(calculator.display.value)">
+        
+
+</form>
+</div>
+
+</body>
+</html>
