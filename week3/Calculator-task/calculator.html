@@ -5,9 +5,7 @@
     <title>calculator</title>
 
     <style>
-         *{
-            background-color:black;
-        }
+    
         #b1{
 
             background-color: black;
@@ -20,6 +18,7 @@
             font-size: 22px;
             outline: none;
             box-shadow: 4px 0px 12px blue inset;
+            
         }
 
         #b2{
@@ -33,6 +32,7 @@ min-width: 71px;
 min-height: 70px;
 font-size: 22px;
 outline: none;
+box-shadow: 4px 0px 10px red inset;
 }
 #b3{
 
@@ -44,6 +44,7 @@ padding: 10px;
 min-width: 50px;
 font-size: 22px;
 outline: none;
+box-shadow: 4px 0px 10px #0cf50c inset;
 }
 #b4{
 background-color: black;
@@ -51,11 +52,12 @@ color: #0cf50c;
 border-color:green;
 border-width: 1.5px;
 padding: 10px;
-min-width: 146px;
+min-width: 147px;
 min-height: 70px;
 font-size: 22px;
 outline: none;
 margin-left: 19.9px; 
+box-shadow: 4px 0px 10px #0cf50c inset;
 }
 #b5{
 background-color: black;
@@ -67,6 +69,7 @@ min-width: 144px;
 min-height: 70px;
 font-size: 22px;
 outline: none;
+box-shadow: 4px 0px 10px #0cf50c inset;
 }
 #b6{
 background-color: black;
@@ -80,43 +83,46 @@ min-height: 70px;
 font-size: 22px;
 outline: none;
 margin-left: 20px;
+box-shadow: 4px 0px 10px red inset;
 }
 #display{
-    
-    position: absolute;
-     margin-left:570px; 
-     margin-top: 90px;
+
+     margin-top: 120px; 
       background-color: black; 
       outline: none;
-  border-color:hotpink;
-   border-width: 1.5px;
-    padding-left: 10px;
-     font-size: 25px;
+      border-color:hotpink;
+      border-width: 1.5px;
+      padding-left: 10px;
+      font-size: 25px;
       color:mediumspringgreen;
-       min-width: 450px;
-        min-height: 50px;
+      min-width: 450px;
+      min-height: 50px;
 }
 #heading{
 background-color: navy;
 color: palegreen;
 text-align: center;
-margin-left: 30px;
+/* margin-left: 30px; */
 
-}
-input[type=button]:active {
-  background-color: #0cf50c;    
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+     }
+  
 
-input[type=button]:hover {
-  background-color: #003300;
-  color: white;
-}   
+
+.container{
+
+
+width: 1000px;
+background-color:black;
+height: 700px;
+margin-left: 300px;
+margin-top:0px;
+text-align: center;
+}
     </style>
 </head>
-<body>
-    <div>
+<body style="background-color: darkgray;">
+    <div class="container">
+
     <h1 id="heading">CALCULATOR</h1>
     <form name="calculator">
 
@@ -125,30 +131,30 @@ onkeypress="return event.charCode > 41 && event.charCode < 58;" pattern="[0-9]" 
 
 <br><br><br>
 
-<input style="margin-top: 130px; margin-left: 600px;" type="button" id="b1" value="7" onclick="calculator.display.value+='7'">
+<input style="margin-top: 20px;" type="button" id="b1" value="7" onclick="calculator.display.value+='7'">
 <input type="button" id="b1" value="8" onclick="calculator.display.value+='8'">
 <input type="button" id="b1" value="9" onclick="calculator.display.value+='9'">
 <input type="button" id="b6" value="clear" onclick="calculator.display.value=' '">
+<br>
 
 
-
-<input style="margin-left: 600px; margin-top: 0px;" type="button" id="b1" value="4" onclick="calculator.display.value+='4'">
+<input type="button" id="b1" value="4" onclick="calculator.display.value+='4'">
 <input type="button" id="b1" value="5" onclick="calculator.display.value+='5'">
 <input type="button" id="b1" value="6" onclick="calculator.display.value+='6'">
 <input style="margin-left: 20px;" type="button" id="b2" value="+" onclick="calculator.display.value+='+'">
 <input style="font-size: 25x; ;;" type="button" id="b2" value="-" onclick="calculator.display.value+='-'">
 
 
-
-<input style="margin-left: 600px;" type="button" id="b1" value="1" onclick="calculator.display.value+='1'">
+<br>
+<input  type="button" id="b1" value="1" onclick="calculator.display.value+='1'">
 <input type="button" id="b1" value="2" onclick="calculator.display.value+='2'">
 <input type="button" id="b1" value="3" onclick="calculator.display.value+='3'">
 <input style="margin-left: 20px;padding-top: 10px;" type="button" id="b2" value="*" onclick="calculator.display.value+=' *'">
 <input type="button" id="b2" value="/" onclick="calculator.display.value+='/'">
+<br>
 
 
-
-<input style="margin-left: 600px;" type="button" id="b1" value="0" onclick="calculator.display.value+='0'">
+<input  type="button" id="b1" value="0" onclick="calculator.display.value+='0'">
 <input  type="button" id="b5" value="00" onclick="calculator.display.value+='00'">
 <input  type="button" id="b4" value="=" onclick="calculator.display.value=eval(calculator.display.value)">
         
@@ -160,3 +166,9 @@ onkeypress="return event.charCode > 41 && event.charCode < 58;" pattern="[0-9]" 
 
 </body>
 </html>
+
+
+
+
+<!-- https://github.com/rvsp/space-invaders -->
+<!-- https://space-game-demo.netlify.app/ -->
