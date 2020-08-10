@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Date of Birth Difference</title>
+	<style type="text/css">
+
+		.dateInput{
+			font-size: 35px;
+			margin-left: 550px;
+		    margin-top: 100px;
+            font-style: italic;
+
+		}
+
+		.button {
+		  background-color: chocolate   ;
+		  border: none;
+		  color: black;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 35px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  margin-left: 500px;
+
+		   margin-top: 150px;
+		  border-radius: 12px;
+		}
+
+		p{
+			font-family: Arial;
+			margin-left: 500px;
+			font-size: 30px;
+		}
+
+		h3{
+			font-family: Arial;
+			margin-left: 500px;
+			font-size: 30px;
+			 margin-top: 120px;
+		}
+
+	</style>
+</head>
+<body style="background-color: pink">
+
+	<script src="date1.js"></script>
+
+	<script>
+
+		function findDateDifference() {
+		  var x = document.getElementById("myDate");
+		  var defaultVal = x.defaultValue;
+		  var currentVal = x.value;
+
+		  var date1 = new Date(currentVal);
+		  var date2 = new Date();
+		  
+		  var second=1000, minute=second*60, hour=minute*60, day=hour*24, week=day*7;
+
+		    var timeDiff = Math.abs(date2 - date1);
+
+            // days difference
+            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+		    //var timediff = date2 - date1;
+		    console.log("Milli Second Difference --> "+timeDiff);
+		    
+		    console.log("Years Difference" + (date2.getFullYear() - date1.getFullYear()));
+		    console.log("Months Difference " + (( date2.getFullYear() * 12 + date2.getMonth() ) - ( date1.getFullYear() * 12 + date1.getMonth() )));
+	        console.log("Week Difference  "  +  Math.floor(timeDiff / week));
+	        console.log("Days Difference   "   +  Math.floor(timeDiff / day)); 
+	        console.log("Hours Difference  "  +  Math.floor(timeDiff / hour)); 
+	        console.log("Minutes Difference  "+  Math.floor(timeDiff / minute));
+	        console.log("Seconds Difference   "+  Math.floor(timeDiff / second));
+
+
+		  if (defaultVal == currentVal) {
+		    document.getElementById("myParaText").innerHTML = "Default value and current value is the same: "
+		    + x.defaultValue + " and " + x.value
+		    + "<br>Change the value of the date field to see the difference!";
+		  } else {
+		    document.getElementById("myParaText").innerHTML = "<br>The current date value is  " + currentVal + "<br> Years Difference  " + (date2.getFullYear() - date1.getFullYear()) + "<br> Months Difference  " + (( date2.getFullYear() * 12 + date2.getMonth() ) - ( date1.getFullYear() * 12 + date1.getMonth() )) + "<br> Week Difference  "  +  Math.floor(timeDiff / week) + "<br> Days Difference  " + Math.floor(timeDiff / day) + "<br> Hours Difference  " + Math.floor(timeDiff / hour) + "<br> Minutes Difference  " + Math.floor(timeDiff / minute) + "<br> Seconds Difference  " + Math.floor(timeDiff / second) + "<br> Milli Second Difference  " + timeDiff;
+		  }
+
+		}
+		
+	</script>
+</body>
+</html>

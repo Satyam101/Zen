@@ -1,0 +1,181 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+
+<style>
+.container{
+
+
+width: 700px;
+background-color:gray;
+height: 700px;
+margin-left: 425px;
+margin-top:0px;
+text-align: center;
+}
+#display{
+    margin-top: 100px;
+    min-width: 300px;
+    min-height: 40px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 22px;
+    padding-left: 40px;
+    padding-right: 10px;
+    
+
+}
+#clickme{
+
+    margin-top: 50px;
+    min-width: 300px;
+    min-height: 40px;
+    border-radius: 1ch;
+    font-size: 22px;
+    outline: none;
+}
+
+#m1{
+    font-size: 32px;
+     margin-top: 50px;
+      background-color:darkturquoise; 
+      color:darkslategrey;font-style: italic;
+}
+</style>
+
+</head>
+<body>
+<script src="generator.js"></script>
+
+<script>
+
+		function getRandomInt(min, max) {
+		  min = Math.ceil(min);
+		  max = Math.floor(max);
+		  return Math.floor(Math.random() * (max - min)) + min; 
+
+		function checkIfUnique(num){
+
+			var numArr = num.toString().split("");
+			var numSet = new Set(numArr);
+
+			if(numArr.length == numSet.size){
+				return true;
+			}else{
+				return false;
+			}
+
+		}
+
+		function get8DigitUniqueRandomNumber() {
+
+			var num = getRandomInt(10000000,99999999);
+
+			var p = document.getElementById("myParaText"); 
+
+			if(checkIfUnique(num)){
+				console.log(num);
+				p.innerHTML = num;
+			}else{
+				get8DigitUniqueRandomNumber();
+			}
+
+		}
+
+		//get8DigitUniqueRandomNumber();
+	</script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Number Generator</title>
+	<style type="text/css">
+	.container{
+
+
+width: 700px;
+background-color:gray;
+height: 700px;
+margin-left: 425px;
+margin-top:0px;
+text-align: center;
+}
+    
+    	.button {
+            
+
+margin-top: 50px;
+min-width: 300px;
+min-height: 40px;
+border-radius: 1ch;
+font-size: 22px;
+outline: none;
+}
+    
+/* 
+		 *{box-sizing:border-box;font: bold 14px Arial, sans-serif;} */
+
+		p{
+            margin-top: 100px;
+    min-width: 300px;
+    min-height: 40px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 35px;
+    color: darkorange;
+    padding-left: 40px;
+    padding-right: 10px;
+    
+		}
+	</style>
+</head>
+<body style="background-color: black">
+
+	<script src="generator.js"></script>	
+
+	<script type="text/javascript">
+		function getRandomInt(min, max) {
+		  min = Math.ceil(min);
+		  max = Math.floor(max);
+		  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+		}
+
+		function checkIfUnique(num){
+
+			var numArr = num.toString().split("");
+			var numSet = new Set(numArr);
+
+			if(numArr.length == numSet.size){
+				return true;
+			}else{
+				return false;
+			}
+
+		}
+
+		function get8DigitUniqueRandomNumber() {
+
+			var num = getRandomInt(10000000,99999999);
+
+			var p = document.getElementById("myParaText"); 
+
+			if(checkIfUnique(num)){
+				console.log(num);
+				p.innerHTML = num;
+			}else{
+				get8DigitUniqueRandomNumber();
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>
