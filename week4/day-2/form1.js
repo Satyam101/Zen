@@ -3,6 +3,8 @@
     mainDiv.setAttribute('class', 'main');
     
     var form2=document.createElement("form");
+    form2.id="form";
+    form2.setAttribute("onsubmit","displayDetails()");
     mainDiv.appendChild(form2);
 
     var table1=document.createElement("table");
@@ -356,15 +358,16 @@ var input9=document.createElement("input");
 input9.setAttribute("type","submit");
 input9.setAttribute("id","button1");
 input9.setAttribute("value","Button");
+form2.appendChild(input9);
 
- input9.setAttribute("onclick","displayDetails()");
+//  input9.setAttribute("onclick","displayDetails()");
 
 
 
 
 document.body.appendChild(mainDiv);
 
-document.body.appendChild(input9);   
+  
 
 
 

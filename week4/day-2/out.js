@@ -6,6 +6,8 @@ var rows = 1;
 var entry = document.getElementById("button1");
 // entry.addEventListener("click", displayDetails());
 function displayDetails() {
+    event.preventDefault();
+
     var fullname = document.getElementById("inp1").value;
     var lastname = document.getElementById("inp2").value;
     var address = document.getElementById("inp3").value;
@@ -67,8 +69,11 @@ function GetSelected() {
         arr = selected.join(",");
         return arr;
     }
-    else{
+    else if(selected.length<2){
+           
         alert("Please Choose at least 2 Boxes");
+        document.getElementById('FormData').reset();
+
         
     }
 

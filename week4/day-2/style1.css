@@ -1,10 +1,9 @@
 
-*{
-
-    background-color:aquamarine ;
+body{
+  background-color: rosybrown;
 }
 .main{
-background-color: aquamarine; 
+background-color:yellow; 
 width: fit-content;
  margin-left: 300px;
   margin-top: px;
@@ -17,7 +16,7 @@ width: fit-content;
 
 .awesome {
     padding: 10px;
-    background:grey;
+    background:slateblue;
     color: white;
     min-width: 30px;
     text-align: center;
@@ -45,7 +44,7 @@ width: fit-content;
   }
 
   #button1{
-    margin-left: 650px;
+    margin-left: 350px;
     min-width: 120px;
     min-height: 35px;
     font-size: 22px;
@@ -54,7 +53,7 @@ width: fit-content;
     background-color: navy;
     color: wheat;
     border-radius: 1cm;
-   outline: none    ;
+   outline: none;
   }
   #display{
 
@@ -62,7 +61,8 @@ width: fit-content;
     width: 50%;
     margin-left: 380px;
     margin-top: 20px;
-    background-color: rgb(192, 255, 20);
+    background-color:silver;
     padding: 5px;
+
   }
   
