@@ -161,7 +161,7 @@ function ready()
 {
     let overlays=Array.from(document.getElementsByClassName("overlay-text"));
     let cards=Array.from(document.getElementsByClassName("card"));
-       let game=new FlipTile(120,cards);
+       let game=new FlipTile(180,cards);
     
        overlays.forEach(overlay =>{
         overlay.addEventListener("click" , () => {
