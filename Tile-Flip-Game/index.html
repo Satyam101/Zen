@@ -1,0 +1,350 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Flip Game</title>
+    <script src="main.js" async></script>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+    <h1 class="page-title">TILE FLIP GAME</h1>
+
+    <div class="overlay-text visible">
+        Click to Start
+      </div>
+      <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+      </div>
+      <div id="victory-text" class="overlay-text">
+        Winner
+        <span class="overlay-text-small">Click to Restart</span>
+      </div>
+
+
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+Time <span id="time-remaining">120</span>
+</div>
+<div class="game-info">
+Flips <span id="flips">0</span>
+</div>
+</div>
+
+
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img3.jpg">
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img3.jpg">
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img1.jpg">
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img1.jpg">
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img4.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img4.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img5.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img5.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img7.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img7.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img8.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img8.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img9.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img9.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img10.jpg">
+            </div>
+        </div>
+        
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img10.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img11.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img11.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img12.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img12.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img13.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img13.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img2.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img2.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img15.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img15.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img14.jpg">
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face ">
+              
+             <img class="spider" src="Assets/maxresdefault.jpg">
+             </div>
+                <div class="card-front card-face">
+                 
+                 <img class="card-value" src="Assets/img14.jpg">
+            </div>
+        </div>
+        
+        
+
+
+
+        
+        
+    </div>
+    
+</body>
+</html>
