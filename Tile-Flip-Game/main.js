@@ -76,7 +76,6 @@ class FlipTile{
  
  if(this.getcardtype(card)===this.getcardtype(this.cardToCheck))
  this.cardMatch(card,this.cardToCheck);
- 
  else
  this.cardNotMatch(card,this.cardToCheck);
  
@@ -155,13 +154,24 @@ class FlipTile{
  
      }
     }
+
     
+    if(document.readyState==="loading"){
+
+        document.addEventListener('DOMContentLoaded', ready());
+    }else{
+        ready();
+    
+    }
+
+
+
 
 function ready()
 {
     let overlays=Array.from(document.getElementsByClassName("overlay-text"));
     let cards=Array.from(document.getElementsByClassName("card"));
-       let game=new FlipTile(180,cards);
+       let game=new FlipTile(120,cards);
     
        overlays.forEach(overlay =>{
         overlay.addEventListener("click" , () => {
@@ -181,10 +191,4 @@ function ready()
 }
 
 
-if(document.readyState==="loading"){
 
-    document.addEventListener('DOMContentLoaded', ready());
-}else{
-    ready();
-
-}

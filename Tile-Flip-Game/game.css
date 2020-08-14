@@ -11,11 +11,11 @@ font-family: 'Times New Roman', Times, serif;
 
 body {
 margin: 0;
-background: radial-gradient(#333355,black);
+background: radial-gradient(  black,blue,green);
 }
 
 .page-title {
-color: burlywood;
+color:rgb(17, 243, 156);
 font-family:  serif;
 font-weight: lighter;
 text-align: center;
@@ -29,7 +29,7 @@ justify-content: space-between;
 }
 
 .game-info {
-color: chartreuse;
+color: rgb(17, 243, 156);;
 font-size: 60px;
 }
 
@@ -57,7 +57,7 @@ align-items: center;
 width: 100%;
 height: 100%;
 border-radius: 10px;
-border-width: 1px;
+border-width: 1.5px;
 
 border-style:solid;
 overflow: hidden;
@@ -80,35 +80,22 @@ animation: dance 1s linear infinite 500ms;
 
 .card-back {
 background-color: black;
-border-color: brown;
+border-color: aqua;
 transform: rotateY(0); 
-}
-
-.cob-web {
-position: absolute;
-transition: width 100ms ease-in-out, height 100ms ease-in-out;
-width: 47px;
-height: 47px;
-}
-
-.card-face:hover .cob-web {
-width: 52px;
-height: 52px;
+;
 }
 
 
-.spider {
+.sticker {
 align-self: flex-start;
-/* transition: transform 1000ms ease-in-out; */
-transform: translateY(-5px);
-margin-top: 5px;
 
+margin-top: 5px;
 width: 140px;
 height: 190px;
 
 }
 
-.card-back:hover .spider {
+.card-back:hover .sticker {
 transform: translateY(0);
 }
 
@@ -121,14 +108,14 @@ width: 140px;
 height: 190px;
 }
 
-.card-front:hover .card-value {
-transform: scale(1);
-}
+
 
 .card-front {
-background-color: #FFBB89;
-border-color: #333;
+background-color: black;
+border-color: red;
 transform: rotateY(180deg);
+border-width: 1.5px;
+
 
 }
 
@@ -143,31 +130,19 @@ position: fixed;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-color: #FF6D00;
+color: blue;
 font-family: Creepy, serif;
 transition: background-color 500ms, font-size 500ms;
 }
 
-.overlay-text-small {
-font-size: .3em;
-}
+
 
 .overlay-text.visible {
 display: flex;
 animation: overlay-grow 1000ms forwards;
 }
 
-@keyframes dance {
-0%, 100% {
-  transform: rotate(0)
-}
-25% {
-  transform: rotate(-30deg)
-}
-75% {
-  transform: rotate(30deg)
-}
-}
+
 
 @keyframes overlay-grow {
 from {
@@ -176,7 +151,7 @@ from {
 }
 to {
   background-color: rgba(0, 0, 0, .8);
-  font-size: 10em;
+  font-size: 8em;
 }
 }
 

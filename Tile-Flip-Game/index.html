@@ -1,350 +1,850 @@
-<html lang="en">
+ <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tile Flip Game</title>
-    <script src="main.js" async></script>
-    <link rel="stylesheet" href="game.css">
+  
+ <link rel="stylesheet" href="game.css">
 </head>
+
+
 <body>
-
-    <h1 class="page-title">TILE FLIP GAME</h1>
-
-    <div class="overlay-text visible">
-        Click to Start
-      </div>
-      <div id="game-over-text" class="overlay-text">
-        GAME OVER
-        <span class="overlay-text-small">Click to Restart</span>
-      </div>
-      <div id="victory-text" class="overlay-text">
-        Winner
-        <span class="overlay-text-small">Click to Restart</span>
-      </div>
+<script>
 
 
-    <div class="game-container">
-        <div class="game-info-container">
-            <div class="game-info">
-Time <span id="time-remaining">120</span>
-</div>
-<div class="game-info">
-Flips <span id="flips">0</span>
-</div>
-</div>
+    var heading =document.createElement('h1');
+    heading.setAttribute("class",'page-title');
+    heading.innerText="TILE FLIP GAME";
+   
+    var div1=document.createElement('div');
+    div1.classList.add('overlay-text','visible');
+    div1.innerText='Start By Clicking ';
+    document.body.append(div1);
 
-
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img3.jpg">
-            </div>
-        </div>
-
-
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img3.jpg">
-            </div>
-        </div>
-
-
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img1.jpg">
-            </div>
-        </div>
-
-
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img1.jpg">
-            </div>
-        </div>
-
-
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img4.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img4.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img5.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img5.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img7.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img7.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img8.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img8.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img9.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img9.jpg">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img10.jpg">
-            </div>
-        </div>
-        
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img10.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img11.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img11.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img12.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img12.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img13.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img13.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img2.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img2.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img15.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img15.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img14.jpg">
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-back card-face ">
-              
-             <img class="spider" src="Assets/maxresdefault.jpg">
-             </div>
-                <div class="card-front card-face">
-                 
-                 <img class="card-value" src="Assets/img14.jpg">
-            </div>
-        </div>
-        
-        
+    var div2=document.createElement('div');
+    div2.classList.add('overlay-text');
+    div2.id='game-over-text';
+    div2.innerText='YOU LOSE';
+  
+var span1=document.createElement('span');
+span1.classList.add('overlay-text-small');
+span1.innerText='PLAY AGAIN';
+div2.appendChild(span1);
 
 
 
+var div3=document.createElement('div');
+    div3.classList.add('overlay-text');
+    div3.id='victory-text';
+    div3.innerText='YOU WIN';
+  
+var span2=document.createElement('span');
+span2.classList.add('overlay-text-small');
+span2.innerText='PLAY AGAIN';
+div3.appendChild(span2);
+
+
+
+
+
+
+
+var mainDiv=document.createElement('div');
+mainDiv.classList.add('game-container');
+var div4=document.createElement('div');
+div4.classList.add('game-info-container');
+mainDiv.appendChild(div4);
+ var div5=document.createElement('div');
+ div5.classList.add('game-info');
+ div4.appendChild(div5);
+ var lb=document.createElement('label');
+ lb.innerText='Time';
+ div5.appendChild(lb);
+ var span3=document.createElement('span');
+ span3.id='time-remaining';
+span3.innerText='120';
+div5.appendChild(span3);
+
+var div6=document.createElement('div');
+ div6.classList.add('game-info');
+ div4.appendChild(div6);
+ var lb1=document.createElement('label');
+ lb1.innerText='Flips';
+ div6.appendChild(lb1);
+ var span4=document.createElement('span');
+ span4.id='flips';
+span4.innerText='0';
+div6.appendChild(span4);
+
+
+
+
+
+//front
+var maincarddiv=document.createElement('div');
+maincarddiv.classList.add('card');
+mainDiv.appendChild(maincarddiv);
+
+var carddiv1=document.createElement('div');
+carddiv1.classList.add('card-back','card-face');
+maincarddiv.appendChild(carddiv1);
+
+var image1=document.createElement('img');
+image1.classList.add('sticker');
+image1.src='./Assets/maxresdefault.jpg';
+image1.id='m1'
+carddiv1.appendChild(image1);
+
+
+//back----------------------------------------------------
+var carddiv2=document.createElement('div');
+carddiv2.classList.add('card-front','card-face');
+maincarddiv.appendChild(carddiv1);
+
+var image2=document.createElement('img');
+image2.classList.add('card-value');
+image2.src="./Assets/img3.jpg";
+image2.id='m2'
+carddiv2.appendChild(image2);
+//--------------------------------------------------
+
+
+
+
+var maincarddiv1=document.createElement('div');
+maincarddiv1.classList.add('card');
+mainDiv.appendChild(maincarddiv1);
+
+var carddiv3=document.createElement('div');
+carddiv3.classList.add('card-back','card-face');
+maincarddiv1.appendChild(carddiv3);
+
+var image3=document.createElement('img');
+image3.classList.add('sticker');
+image3.src='./Assets/maxresdefault.jpg';
+image3.id='m3';
+carddiv3.appendChild(image3);
+
+//back----------------------------------------------------
+var carddiv4=document.createElement('div');
+carddiv4.classList.add('card-front','card-face');
+maincarddiv1.appendChild(carddiv4);
+
+var image4=document.createElement('img');
+image4.classList.add('card-value');
+image4.src='./Assets/img3.jpg';
+image4.id='m4';
+carddiv4.appendChild(image4);
+
+
+
+
+
+
+
+//front
+var maincarddiv2=document.createElement('div');
+maincarddiv2.classList.add('card');
+mainDiv.appendChild(maincarddiv2);
+
+var carddiv5=document.createElement('div');
+carddiv5.classList.add('card-back','card-face');
+maincarddiv2.appendChild(carddiv5);
+
+var image5=document.createElement('img');
+image5.classList.add('sticker');
+image5.src='./Assets/maxresdefault.jpg';
+carddiv5.appendChild(image5);
+
+//back----------------------------------------------------
+var carddiv6=document.createElement('div');
+carddiv6.classList.add('card-front','card-face');
+maincarddiv2.appendChild(carddiv6);
+
+var image6=document.createElement('img');
+image6.classList.add('card-value');
+image6.src='./Assets/img1.jpg';
+carddiv6.appendChild(image6);
+//--------------------------------------------------
+
+
+
+
+
+var maincarddiv3=document.createElement('div');
+maincarddiv3.classList.add('card');
+mainDiv.appendChild(maincarddiv3);
+
+var carddiv7=document.createElement('div');
+carddiv7.classList.add('card-back','card-face');
+maincarddiv3.appendChild(carddiv7);
+
+var image7=document.createElement('img');
+image7.classList.add('sticker');
+image7.src='./Assets/maxresdefault.jpg';
+carddiv7.appendChild(image7);
+
+//back----------------------------------------------------
+var carddiv8=document.createElement('div');
+carddiv8.classList.add('card-front','card-face');
+maincarddiv3.appendChild(carddiv8);
+
+var image8=document.createElement('img');
+image8.classList.add('card-value');
+image8.src='./Assets/img1.jpg';
+carddiv8.appendChild(image8);
+
+
+
+
+
+
+var maincarddiv4=document.createElement('div');
+maincarddiv4.classList.add('card');
+mainDiv.appendChild(maincarddiv4);
+
+var carddiv9=document.createElement('div');
+carddiv9.classList.add('card-back','card-face');
+maincarddiv4.appendChild(carddiv9);
+
+var image9=document.createElement('img');
+image9.classList.add('sticker');
+image9.src='Assets/maxresdefault.jpg';
+carddiv9.appendChild(image9);
+
+//back----------------------------------------------------
+var carddiv10=document.createElement('div');
+carddiv10.classList.add('card-front','card-face');
+maincarddiv4.appendChild(carddiv10);
+
+var image10=document.createElement('img');
+image10.classList.add('card-value');
+image10.src='Assets/img4.jpg';
+carddiv10.appendChild(image10);
+
+
+
+
+
+
+
+var maincarddiv5=document.createElement('div');
+maincarddiv5.classList.add('card');
+mainDiv.appendChild(maincarddiv5);
+
+var carddiv11=document.createElement('div');
+carddiv11.classList.add('card-back','card-face');
+maincarddiv5.appendChild(carddiv11);
+
+var image11=document.createElement('img');
+image11.classList.add('sticker');
+image11.src='Assets/maxresdefault.jpg';
+carddiv11.appendChild(image11);
+
+//back----------------------------------------------------
+var carddiv12=document.createElement('div');
+carddiv12.classList.add('card-front','card-face');
+maincarddiv5.appendChild(carddiv12);
+
+var image12=document.createElement('img');
+image12.classList.add('card-value');
+image12.src='Assets/img4.jpg';
+carddiv12.appendChild(image12);
+
+
+
+
+
+
+
+var maincarddiv6=document.createElement('div');
+maincarddiv6.classList.add('card');
+mainDiv.appendChild(maincarddiv6);
+
+var carddiv13=document.createElement('div');
+carddiv13.classList.add('card-back','card-face');
+maincarddiv6.appendChild(carddiv13);
+
+var image13=document.createElement('img');
+image13.classList.add('sticker');
+image13.src='Assets/maxresdefault.jpg';
+carddiv13.appendChild(image13);
+
+//back----------------------------------------------------
+var carddiv14=document.createElement('div');
+carddiv14.classList.add('card-front','card-face');
+maincarddiv6.appendChild(carddiv14);
+
+var image14=document.createElement('img');
+image14.classList.add('card-value');
+image14.src='Assets/img5.jpg';
+carddiv14.appendChild(image14);
+
+
+
+
+
+var maincarddiv7=document.createElement('div');
+maincarddiv7.classList.add('card');
+mainDiv.appendChild(maincarddiv7);
+
+var carddiv15=document.createElement('div');
+carddiv15.classList.add('card-back','card-face');
+maincarddiv7.appendChild(carddiv15);
+
+var image15=document.createElement('img');
+image15.classList.add('sticker');
+image15.src='Assets/maxresdefault.jpg';
+carddiv15.appendChild(image15);
+
+//back----------------------------------------------------
+var carddiv16=document.createElement('div');
+carddiv16.classList.add('card-front','card-face');
+maincarddiv7.appendChild(carddiv16);
+
+var image16=document.createElement('img');
+image16.classList.add('card-value');
+image16.src='Assets/img5.jpg';
+carddiv16.appendChild(image16);
+
+
+
+
+var maincarddiv8=document.createElement('div');
+maincarddiv8.classList.add('card');
+mainDiv.appendChild(maincarddiv8);
+
+var carddiv17=document.createElement('div');
+carddiv17.classList.add('card-back','card-face');
+maincarddiv8.appendChild(carddiv17);
+
+var image17=document.createElement('img');
+image17.classList.add('sticker');
+image17.src='Assets/maxresdefault.jpg';
+carddiv17.appendChild(image17);
+
+//back----------------------------------------------------
+var carddiv18=document.createElement('div');
+carddiv18.classList.add('card-front','card-face');
+maincarddiv8.appendChild(carddiv18);
+
+var image18=document.createElement('img');
+image18.classList.add('card-value');
+image18.src='Assets/img7.jpg';
+carddiv18.appendChild(image18);
+
+
+
+
+
+var maincarddiv9=document.createElement('div');
+maincarddiv9.classList.add('card');
+mainDiv.appendChild(maincarddiv9);
+
+var carddiv19=document.createElement('div');
+carddiv19.classList.add('card-back','card-face');
+maincarddiv9.appendChild(carddiv19);
+
+var image19=document.createElement('img');
+image19.classList.add('sticker');
+image19.src='Assets/maxresdefault.jpg';
+carddiv19.appendChild(image19);
+
+//back----------------------------------------------------
+var carddiv20=document.createElement('div');
+carddiv20.classList.add('card-front','card-face');
+maincarddiv9.appendChild(carddiv20);
+
+var image20=document.createElement('img');
+image20.classList.add('card-value');
+image20.src='Assets/img7.jpg';
+carddiv20.appendChild(image20);
+
+
+
+
+var maincarddiv10=document.createElement('div');
+maincarddiv10.classList.add('card');
+mainDiv.appendChild(maincarddiv10);
+
+var carddiv21=document.createElement('div');
+carddiv21.classList.add('card-back','card-face');
+maincarddiv10.appendChild(carddiv21);
+
+var image21=document.createElement('img');
+image21.classList.add('sticker');
+image21.src='Assets/maxresdefault.jpg';
+carddiv21.appendChild(image21);
+
+//back----------------------------------------------------
+var carddiv22=document.createElement('div');
+carddiv22.classList.add('card-front','card-face');
+maincarddiv10.appendChild(carddiv22);
+
+var image22=document.createElement('img');
+image22.classList.add('card-value');
+image22.src='Assets/img8.jpg';
+carddiv22.appendChild(image22);
+
+
+
+
+var maincarddiv11=document.createElement('div');
+maincarddiv11.classList.add('card');
+mainDiv.appendChild(maincarddiv11);
+
+var carddiv23=document.createElement('div');
+carddiv23.classList.add('card-back','card-face');
+maincarddiv11.appendChild(carddiv23);
+
+var image23=document.createElement('img');
+image23.classList.add('sticker');
+image23.src='Assets/maxresdefault.jpg';
+carddiv23.appendChild(image23);
+
+//back----------------------------------------------------
+var carddiv24=document.createElement('div');
+carddiv24.classList.add('card-front','card-face');
+maincarddiv11.appendChild(carddiv24);
+
+var image24=document.createElement('img');
+image24.classList.add('card-value');
+image24.src='Assets/img8.jpg';
+carddiv24.appendChild(image24);
+
+
+
+
+var maincarddiv12=document.createElement('div');
+maincarddiv12.classList.add('card');
+mainDiv.appendChild(maincarddiv12);
+
+var carddiv25=document.createElement('div');
+carddiv25.classList.add('card-back','card-face');
+maincarddiv12.appendChild(carddiv25);
+
+var image25=document.createElement('img');
+image25.classList.add('sticker');
+image25.src='Assets/maxresdefault.jpg';
+carddiv25.appendChild(image25);
+
+//back----------------------------------------------------
+var carddiv26=document.createElement('div');
+carddiv26.classList.add('card-front','card-face');
+maincarddiv12.appendChild(carddiv26);
+
+var image26=document.createElement('img');
+image26.classList.add('card-value');
+image26.src='Assets/img9.jpg';
+carddiv26.appendChild(image26);
+
+
+
+
+
+
+
+var maincarddiv13=document.createElement('div');
+maincarddiv13.classList.add('card');
+mainDiv.appendChild(maincarddiv13);
+
+var carddiv27=document.createElement('div');
+carddiv27.classList.add('card-back','card-face');
+maincarddiv13.appendChild(carddiv27);
+
+var image27=document.createElement('img');
+image27.classList.add('sticker');
+image27.src='Assets/maxresdefault.jpg';
+carddiv27.appendChild(image27);
+
+//back----------------------------------------------------
+var carddiv28=document.createElement('div');
+carddiv28.classList.add('card-front','card-face');
+maincarddiv13.appendChild(carddiv28);
+
+var image28=document.createElement('img');
+image28.classList.add('card-value');
+image28.src='Assets/img9.jpg';
+carddiv28.appendChild(image28);
+
+
+
+   
+
+
+var maincarddiv14=document.createElement('div');
+maincarddiv14.classList.add('card');
+mainDiv.appendChild(maincarddiv14);
+
+var carddiv29=document.createElement('div');
+carddiv29.classList.add('card-back','card-face');
+maincarddiv14.appendChild(carddiv29);
+
+var image29=document.createElement('img');
+image29.classList.add('sticker');
+image29.src='Assets/maxresdefault.jpg';
+carddiv29.appendChild(image29);
+
+//back----------------------------------------------------
+var carddiv30=document.createElement('div');
+carddiv30.classList.add('card-front','card-face');
+maincarddiv14.appendChild(carddiv30);
+
+var image30=document.createElement('img');
+image30.classList.add('card-value');
+image30.src='Assets/img10.jpg';
+carddiv30.appendChild(image30);
+
+
+
+
+
+var maincarddiv15=document.createElement('div');
+maincarddiv15.classList.add('card');
+mainDiv.appendChild(maincarddiv15);
+
+var carddiv31=document.createElement('div');
+carddiv31.classList.add('card-back','card-face');
+maincarddiv15.appendChild(carddiv31);
+
+var image31=document.createElement('img');
+image31.classList.add('sticker');
+image31.src='Assets/maxresdefault.jpg';
+carddiv31.appendChild(image31);
+
+//back----------------------------------------------------
+var carddiv32=document.createElement('div');
+carddiv32.classList.add('card-front','card-face');
+maincarddiv15.appendChild(carddiv32);
+
+var image32=document.createElement('img');
+image32.classList.add('card-value');
+image32.src='Assets/img10.jpg';
+carddiv32.appendChild(image32);
+
+
+var maincarddiv16=document.createElement('div');
+maincarddiv16.classList.add('card');
+mainDiv.appendChild(maincarddiv16);
+
+var carddiv33=document.createElement('div');
+carddiv33.classList.add('card-back','card-face');
+maincarddiv16.appendChild(carddiv33);
+
+var image33=document.createElement('img');
+image33.classList.add('sticker');
+image33.src='Assets/maxresdefault.jpg';
+carddiv33.appendChild(image33);
+
+//back----------------------------------------------------
+var carddiv34=document.createElement('div');
+carddiv34.classList.add('card-front','card-face');
+maincarddiv16.appendChild(carddiv34);
+
+var image34=document.createElement('img');
+image34.classList.add('card-value');
+image34.src='Assets/img11.jpg';
+carddiv34.appendChild(image34);
+
+
+
+
+var maincarddiv17=document.createElement('div');
+maincarddiv17.classList.add('card');
+mainDiv.appendChild(maincarddiv17);
+
+var carddiv35=document.createElement('div');
+carddiv35.classList.add('card-back','card-face');
+maincarddiv17.appendChild(carddiv35);
+
+var image35=document.createElement('img');
+image35.classList.add('sticker');
+image35.src='Assets/maxresdefault.jpg';
+carddiv35.appendChild(image35);
+
+//back----------------------------------------------------
+var carddiv36=document.createElement('div');
+carddiv36.classList.add('card-front','card-face');
+maincarddiv17.appendChild(carddiv36);
+
+var image36=document.createElement('img');
+image36.classList.add('card-value');
+image36.src='Assets/img11.jpg';
+carddiv36.appendChild(image36);
+
         
+
+
+var maincarddiv18=document.createElement('div');
+maincarddiv18.classList.add('card');
+mainDiv.appendChild(maincarddiv18);
+
+var carddiv37=document.createElement('div');
+carddiv37.classList.add('card-back','card-face');
+maincarddiv18.appendChild(carddiv37);
+
+var image37=document.createElement('img');
+image37.classList.add('sticker');
+image37.src='Assets/maxresdefault.jpg';
+carddiv37.appendChild(image37);
+
+//back----------------------------------------------------
+var carddiv38=document.createElement('div');
+carddiv38.classList.add('card-front','card-face');
+maincarddiv18.appendChild(carddiv38);
+
+var image38=document.createElement('img');
+image38.classList.add('card-value');
+image38.src='Assets/img12.jpg';
+carddiv38.appendChild(image38);
+
+
+
         
-    </div>
+      
+
+var maincarddiv19=document.createElement('div');
+maincarddiv19.classList.add('card');
+mainDiv.appendChild(maincarddiv19);
+
+var carddiv39=document.createElement('div');
+carddiv39.classList.add('card-back','card-face');
+maincarddiv19.appendChild(carddiv39);
+
+var image39=document.createElement('img');
+image39.classList.add('sticker');
+image39.src='Assets/maxresdefault.jpg';
+carddiv39.appendChild(image39);
+
+//back----------------------------------------------------
+var carddiv40=document.createElement('div');
+carddiv40.classList.add('card-front','card-face');
+maincarddiv19.appendChild(carddiv40);
+
+var image40=document.createElement('img');
+image40.classList.add('card-value');
+image40.src='Assets/img12.jpg';
+carddiv40.appendChild(image40);
+
+
+
+var maincarddiv20=document.createElement('div');
+maincarddiv20.classList.add('card');
+mainDiv.appendChild(maincarddiv20);
+
+var carddiv41=document.createElement('div');
+carddiv41.classList.add('card-back','card-face');
+maincarddiv20.appendChild(carddiv41);
+
+var image41=document.createElement('img');
+image41.classList.add('sticker');
+image41.src='Assets/maxresdefault.jpg';
+carddiv41.appendChild(image41);
+
+//back----------------------------------------------------
+var carddiv42=document.createElement('div');
+carddiv42.classList.add('card-front','card-face');
+maincarddiv20.appendChild(carddiv42);
+
+var image42=document.createElement('img');
+image42.classList.add('card-value');
+image42.src='Assets/img13.jpg';
+carddiv42.appendChild(image42);
+
+
+
+
+var maincarddiv21=document.createElement('div');
+maincarddiv21.classList.add('card');
+mainDiv.appendChild(maincarddiv21);
+
+var carddiv43=document.createElement('div');
+carddiv43.classList.add('card-back','card-face');
+maincarddiv21.appendChild(carddiv43);
+
+var image43=document.createElement('img');
+image43.classList.add('sticker');
+image43.src='Assets/maxresdefault.jpg';
+carddiv43.appendChild(image43);
+
+//back----------------------------------------------------
+var carddiv44=document.createElement('div');
+carddiv44.classList.add('card-front','card-face');
+maincarddiv21.appendChild(carddiv44);
+
+var image44=document.createElement('img');
+image44.classList.add('card-value');
+image44.src='Assets/img13.jpg';
+carddiv44.appendChild(image44);
+
+
+        
+
+
+var maincarddiv22=document.createElement('div');
+maincarddiv22.classList.add('card');
+mainDiv.appendChild(maincarddiv22);
+
+var carddiv45=document.createElement('div');
+carddiv45.classList.add('card-back','card-face');
+maincarddiv22.appendChild(carddiv45);
+
+var image45=document.createElement('img');
+image45.classList.add('sticker');
+image45.src='Assets/maxresdefault.jpg';
+carddiv45.appendChild(image45);
+
+//back----------------------------------------------------
+var carddiv46=document.createElement('div');
+carddiv46.classList.add('card-front','card-face');
+maincarddiv22.appendChild(carddiv46);
+
+var image46=document.createElement('img');
+image46.classList.add('card-value');
+image46.src='Assets/img2.jpg';
+carddiv46.appendChild(image46);
+
+
+
+
+
+var maincarddiv23=document.createElement('div');
+maincarddiv23.classList.add('card');
+mainDiv.appendChild(maincarddiv23);
+
+var carddiv47=document.createElement('div');
+carddiv47.classList.add('card-back','card-face');
+maincarddiv23.appendChild(carddiv47);
+
+var image47=document.createElement('img');
+image47.classList.add('sticker');
+image47.src='Assets/maxresdefault.jpg';
+carddiv47.appendChild(image47);
+
+//back----------------------------------------------------
+var carddiv48=document.createElement('div');
+carddiv48.classList.add('card-front','card-face');
+maincarddiv23.appendChild(carddiv48);
+
+var image48=document.createElement('img');
+image48.classList.add('card-value');
+image48.src='Assets/img2.jpg';
+carddiv48.appendChild(image48);
+
+var maincarddiv24=document.createElement('div');
+maincarddiv24.classList.add('card');
+mainDiv.appendChild(maincarddiv24);
+
+var carddiv49=document.createElement('div');
+carddiv49.classList.add('card-back','card-face');
+maincarddiv24.appendChild(carddiv49);
+
+var image49=document.createElement('img');
+image49.classList.add('sticker');
+image49.src='Assets/maxresdefault.jpg';
+carddiv49.appendChild(image49);
+
+//back----------------------------------------------------
+var carddiv50=document.createElement('div');
+carddiv50.classList.add('card-front','card-face');
+maincarddiv24.appendChild(carddiv50);
+
+var image50=document.createElement('img');
+image50.classList.add('card-value');
+image50.src='Assets/img15.jpg';
+carddiv50.appendChild(image50);
+
+
+
+
+var maincarddiv25=document.createElement('div');
+maincarddiv25.classList.add('card');
+mainDiv.appendChild(maincarddiv25);
+
+var carddiv51=document.createElement('div');
+carddiv51.classList.add('card-back','card-face');
+maincarddiv25.appendChild(carddiv51);
+
+var image51=document.createElement('img');
+image51.classList.add('sticker');
+image51.src='Assets/maxresdefault.jpg';
+carddiv51.appendChild(image51);
+
+//back----------------------------------------------------
+var carddiv52=document.createElement('div');
+carddiv52.classList.add('card-front','card-face');
+maincarddiv25.appendChild(carddiv52);
+
+var image52=document.createElement('img');
+image52.classList.add('card-value');
+image52.src='Assets/img15.jpg';
+carddiv52.appendChild(image52);
+
+
+        
+var maincarddiv26=document.createElement('div');
+maincarddiv26.classList.add('card');
+mainDiv.appendChild(maincarddiv26);
+
+var carddiv53=document.createElement('div');
+carddiv53.classList.add('card-back','card-face');
+maincarddiv26.appendChild(carddiv53);
+
+var image53=document.createElement('img');
+image53.classList.add('sticker');
+image53.src='Assets/maxresdefault.jpg';
+carddiv53.appendChild(image53);
+
+//back----------------------------------------------------
+var carddiv54=document.createElement('div');
+carddiv54.classList.add('card-front','card-face');
+maincarddiv26.appendChild(carddiv54);
+
+var image54=document.createElement('img');
+image54.classList.add('card-value');
+image54.src='Assets/img14.jpg';
+carddiv54.appendChild(image54);
+
+
+
+        
+var maincarddiv27=document.createElement('div');
+maincarddiv27.classList.add('card');
+mainDiv.appendChild(maincarddiv27);
+
+var carddiv55=document.createElement('div');
+carddiv55.classList.add('card-back','card-face');
+maincarddiv27.appendChild(carddiv55);
+
+var image55=document.createElement('img');
+image55.classList.add('sticker');
+image55.src='Assets/maxresdefault.jpg';
+carddiv55.appendChild(image55);
+
+//back----------------------------------------------------
+var carddiv56=document.createElement('div');
+carddiv56.classList.add('card-front','card-face');
+maincarddiv27.appendChild(carddiv56);
+
+var image56=document.createElement('img');
+image56.classList.add('card-value');
+image56.src='Assets/img14.jpg';
+carddiv56.appendChild(image56);
     
-</body>
-</html>
+
+
+
+document.body.append(div3);
+document.body.append(div2);
+document.body.append(heading);
+
+document.body.append(mainDiv);
+
+    </script>
+
+
+
+<script src="main.js"></script>    
+
+ </body>
+</html> 
