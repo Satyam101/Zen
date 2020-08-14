@@ -6,7 +6,6 @@ class Dummy{
 
     }
 }
-
 class FlipTile{
     constructor(totaltime,cards)
     {
