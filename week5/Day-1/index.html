@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+    <style>
+body{
+
+    margin-left: 500px;
+    margin-top: 300px;
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: radial-gradient(orange,white,green);
+    color: blue;
+
+}
+#Final-output{
+    
+    margin-top: 300px;
+  
+}
+img{
+
+    margin-left: 20%;
+}
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <script>
+    
+    var mainDiv=document.createElement('div');
+
+    
+    var lb=document.createElement('label');
+        lb.innerText='Time:  ';
+        lb.id='label-name';
+        mainDiv.appendChild(lb);
+        var span3=document.createElement('span');
+        span3.id='time-here';
+       span3.innerText='CountDown Starts';
+       mainDiv.appendChild(span3);
+      
+       div1=document.createElement('div');
+       div1.id="Final-output";
+       mainDiv.append(div1);
+      
+       var div2=document.createElement('div');
+       div2.id="image1"; 
+       mainDiv.appendChild(div2);
+       
+       document.body.append(mainDiv);
+
+
+       </script>
+
+
+    <script src="callback.js"></script>
+
+
+
+
+
+
+</body>
+</html>
