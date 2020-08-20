@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End</title>
+
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<style>
+
+#Alldata{
+    width: 600px;
+background-color: yellowgreen;
+text-align: center;
+padding-bottom: 20px ;
+padding-top: 10px ;
+margin-top: 23%;
+margin-left: 20%;
+    }
+#username{
+
+
+    width: 50%;
+    height: 50px;
+    font-size: 22px;
+}
+ button{
+
+
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    background-color: aqua;
+    outline: none;
+    font-style:italic;
+ }
+
+
+</style>
+
+</head>
+<body>
+    <script>
+
+var mainDiv2=document.createElement('div');
+mainDiv2.classList.add('container');
+
+var div1=document.createElement('div');
+div1.id='Alldata';
+mainDiv2.appendChild(div1);
+
+var heading=document.createElement('h1');
+heading.innerText='0';
+heading.id='finalScore';
+div1.appendChild(heading);
+
+var textInp=document.createElement('input');
+textInp.id='username';
+textInp.placeholder='username';
+div1.appendChild(textInp);
+var space =document.createElement('br');
+div1.appendChild(space);
+var space =document.createElement('br');
+div1.appendChild(space);
+
+
+var saveButton=document.createElement('button');
+saveButton.id='saveScoreBtn';
+saveButton.innerText='Save';
+div1.appendChild(saveButton);
+var space =document.createElement('br');
+div1.appendChild(space);
+
+
+
+var playButton=document.createElement('button');
+playButton.id='playButton';
+playButton.innerText='Play Again';
+div1.appendChild(playButton);
+playButton.setAttribute('onclick','location.href="index.html"');
+
+var space =document.createElement('br');
+div1.appendChild(space);
+
+
+var homeButton=document.createElement('button');
+homeButton.id='goHome';
+homeButton.innerText='Go Home';
+homeButton.setAttribute('onclick','location.href="index.html"');
+
+div1.appendChild(homeButton)
+
+
+
+
+
+document.body.appendChild(mainDiv2);
+
+
+const username = document.getElementById('username');
+const saveScoreBtn = document.getElementById('saveScoreBtn');
+const finalScore = document.getElementById('finalScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+
+finalScore.innerText = mostRecentScore;
+
+username.addEventListener('keyup', () => {
+    saveScoreBtn.disabled = !username.value;
+});
+
+saveHighScore = (e) => {
+    e.preventDefault();
+
+    const score = {
+        score: mostRecentScore,
+        name: username.value,
+    };
+    highScores.push(score);
+    highScores.sort((a, b) => b.score - a.score);
+    highScores.splice(5);
+
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    window.location.assign('/');
+};
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+
+#divTag
+{  
+width: 600px;
+background-color: orangered;
+text-align: center;
+padding-bottom: 20px ;
+padding-top: 10px ;
+padding-left: 10px ;
+padding-right: 10px ;
+margin-top: 23%;
+margin-left: 20%;
+}
+button{
+padding: 10px;
+margin-bottom: 20px;
+width: 200px;
+background-color: aqua;
+outline: none;
+font-style:italic;
+}
+
+</style>
+
+    <title>HighScore</title>
+</head>
+<body>
+    <script>
+ 
+     
+        var mainDiv=document.createElement('div');
+        mainDiv.classList.add('container');
+
+var div1=document.createElement('div');
+div1.id='highScores';
+div1.classList.add('flex-center','flex-column');
+mainDiv.appendChild(div1);
+
+var heading1 = document.createElement('h1');
+heading1.innerText='finalScore';
+heading1.id='finalScore';
+div1.appendChild(heading1);
+
+
+var headinglist = document.createElement('ul');
+headinglist.id='highScoresList';
+div1.appendChild(headinglist);
+
+
+var homeButton1=document.createElement('button');
+homeButton1.id='goHome';
+homeButton1.innerText='Go Home';
+homeButton1.setAttribute('onclick','location.href="index.html"');
+
+div1.appendChild(homeButton1)
+
+
+
+
+document.body.appendChild(mainDiv);
+
+
+</script>
+
+
+
+
+</body>
+</html>

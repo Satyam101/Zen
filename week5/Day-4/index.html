@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+ h1{
+color: blue;
+    }
+#play{
+width: 500px;
+font-size: 22px;
+outline: none;
+margin-bottom: 20px;
+    }
+#highscore
+{
+width: 500px;
+font-size: 22px;
+outline: none;
+ }
+ #dataDiv{
+
+width: 600px;
+background-color: orangered;
+text-align: center;
+padding-bottom: 20px ;
+padding-top: 10px ;
+margin-top: 23%;
+margin-left: 20%;
+    }
+body{
+background: radial-gradient(yellow,orange);
+}
+
+
+</style>
+
+
+</head>
+<body>
+ 
+<script>
+
+var mainDiv=document.createElement('div');
+mainDiv.classList.add("container");
+
+var div1=document.createElement('div')
+div1.id='dataDiv';
+mainDiv.appendChild(div1);
+
+var heading= document.createElement('h1');
+heading.innerText='Quick Quiz';
+div1.appendChild(heading);
+
+var playButton= document.createElement('button');
+
+playButton.id='play';
+playButton.innerText='Play';
+
+playButton.setAttribute('onclick','location.href="game.html"');
+div1.appendChild(playButton);
+var space =document.createElement('br');
+div1.appendChild(space);
+
+
+var highScoreButton= document.createElement('button');
+highScoreButton.id='highscore';
+highScoreButton.innerText='HighScore';
+highScoreButton.setAttribute('onclick','location.href="highscores.html"');
+
+div1.appendChild(highScoreButton);
+
+
+document.body.append(mainDiv);
+</script>
+
+</body>
+</html>
