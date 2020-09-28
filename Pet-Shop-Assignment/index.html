@@ -1,0 +1,263 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .mainDiv121 {
+            width: 1535px;
+            /* background-color: plum; */
+             /* margin-top: 100px;  */
+            height: auto;
+            /* margin-left: 50px; */
+            padding-bottom: 10px;
+            font-family: 'Cantarell', sans-serif;
+            position: absolute;
+            z-index: 100;
+
+        }
+
+        #table_body, th, #table_body_counter, #table_body_firstfive, #match {
+            font-size: 22px;
+            color: purple
+        }
+
+
+
+        #b1 {
+
+            font-size: 40px;
+            text-align: center;
+            color: purple;
+        }
+
+        .bg-dark {
+            background-color: purple !important;
+            /* color:gold !important; */
+        }
+
+        .nav-link {
+            color: white!important;
+            font-size: 20px;
+        }
+
+        #image1 {
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+            margin-left: 650px;
+        }
+        .navbar-brand{
+            color: white !important;
+        }
+        body{
+
+            background:url(dog1.jpg);
+              background-repeat: no-repeat;
+               background-size: cover; 
+        }
+        #mainDiv1{
+
+            font-size: 25px;
+            color: purple;
+
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body >
+  
+    <div class="mainDiv121">
+       
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark ">
+            <a class="navbar-brand" href="index.html">Pet Shop</a>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" onclick="AddPetsform(event)">Add Pet Form <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="viewPets(event)">View Pet Table</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="petsCount(event)">Pets Count</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="enquirePets(event)">Store Enquiry</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="firstFiveEnquiry(event)">First 5 Enquiries</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="matchingData(event)">Matching Data</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <div id="mainDiv">
+            <p id="b1"><b>Pet Shop</b></p>
+        </div>
+
+
+        <div id="mainDiv1" style="display: none;">
+            <div>
+                <label for="exampleInputEmail1">Pet Type</label>
+                <input type="text" class="form-control" id="pettype" required>
+            </div>
+            <div>
+                <label for="exampleInputEmail1">Pet Color</label>
+                <input type="text" class="form-control" id="petcolor" required>
+            </div>
+            <div>
+                <label for="exampleInputEmail1">Pet Age</label>
+                <input type="text" class="form-control" id="petage" required>
+            </div>
+            <div>
+                <label for="exampleInputEmail1">Pet Breed</label>
+                <input type="text" class="form-control" id="petbreed" required>
+            </div>
+            <div>
+                <label for="exampleInputEmail1">Pet History</label>
+                <input type="text" class="form-control" id="pethistory" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success" style="margin-left: 600px; font-size: 22px;"
+                onclick="displayPetData(event)">Submit
+                Data</button>
+
+        </div>
+
+
+
+
+        <div id="tableDiv" style="display: none;">
+            <h3 style="text-align: center;">Pets available in the store</h3>
+            <div class="table-responsive">
+                <table class="table table-bordered" border="1">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Pet Type</th>
+                            <th>Pet Color</th>
+                            <th>Pet Age</th>
+                            <th>Pet Breed</th>
+                            <th>Pet History</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div style="display: none;" id="enquiry-form" class="row">
+            <div class="col-md-12">
+
+                <form onsubmit="insertformSubmit(event)">
+                    <div class="form-group">
+                        <label style="font-size: 22px; color: purple;">Enter pets</label>
+                        <input type="text" style="font-size: 22px; color: purple;"   class="form-control" placeholder="Enter Which Type Of Pet You Want ?" id="pets_types" required>
+                    </div>
+
+
+
+                    <button id="enquiry_submit" type="button" onclick="insertEnquirePets(event)"
+                        class="btn btn-primary" style="font-size: 22px;">Enquire</button>
+                </form>
+            </div>
+        </div>
+
+        <div style="display: none;" id="matching_data">
+            <h3 style="text-align: center; color: purple;">Matching Data</h3>
+
+            <div id="match" style="text-align: center;"></div>
+        </div>
+
+
+
+        <div style="display: none;" class="row" id="petsCountTable">
+            <div class="col-md-12">
+                <h3 style="text-align: center;">Pets Count</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Pet Type</th>
+                                <th>Count</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body_counter">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="display: none;" class="row" id="firstfive">
+            <div class="col-md-12">
+                <h3 style="text-align: center;">First 5 customer enquiry status</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body_firstfive">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="Availability.js"></script>
+</body>
+
+</html>
