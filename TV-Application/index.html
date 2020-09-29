@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            position: absolute;
+            top: 90px;
+            left: 15px;
+            z-index: 100;
+            width: 850px;
+            height: 460px;
+            overflow-block: initial;
+        }
+
+        area {
+
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 1160px) {
+            .remote {
+                position: absolute;
+                top: 131px;
+                right: 13%;
+            }
+        }
+      
+
+    </style>
+</head>
+
+<body style="background:linear-gradient(gray,black,blue)">
+    <div id="container">
+        <img src="Tv.png" style="width: 870px; height: 615px; margin-top: 40px;" alt="Tv.png" usemap="#image-map">
+    </div>
+
+    <div>
+        <img src="remote-pic.png" class="remote" usemap="#image-map">
+
+        <map name="image-map">
+
+            <area onclick="TV('VolumeDown')" title="volume-down" coords="90,190,184,249" shape="rect">
+            <area onclick="TV('channelPrevious')" title="channel-previous" coords="22,95,79,180" shape="rect">
+            <area onclick="TV('power')" title="On/Off" coords="134,136,50" shape="circle">
+            <area onclick="TV('VolumeUp')" title="volume-up" coords="85,21,181,80" shape="rect">
+            <area onclick="TV('pause')" title="pause" coords="199,324,48" shape="circle">
+            <area onclick="TV('channelNext')" title="channel-next" coords="189,95,246,181" shape="rect">
+        </map>
+    </div>
+    <script src="index.js"> </script>
+
+</body>
+
+</html>
