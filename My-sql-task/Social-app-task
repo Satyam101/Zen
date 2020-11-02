@@ -1,0 +1,4 @@
+1. select * from friends inner join user_profile on friends.id=user_profile.profile_id;
+2.select * from posts where user_id=5;
+3.select * from user_login_details WHERE gmail LIKE '%gmail%';
+5. select * from profile_status inner join user_profile on id=profile_id inner join user_login_details as user on  user.id=profile_id;
