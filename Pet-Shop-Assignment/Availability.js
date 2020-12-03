@@ -61,7 +61,8 @@ var PetRequest = /** @class */ (function () {
         for (var _i = 0, requests_1 = requests; _i < requests_1.length; _i++) {
             var req123 = requests_1[_i];
             var flag = false;
-            for (var pet1 = 0; pet1 < req123.length; pet1++) { // of req123) {
+            for (var _a = 0, req123_1 = req123; _a < req123_1.length; _a++) {
+                var pet1 = req123_1[_a];
                 if (petList.includes(pet1)) {
                     flag = true;
                 }

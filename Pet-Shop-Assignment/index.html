@@ -18,21 +18,23 @@
     <style>
         .mainDiv121 {
             width: 1535px;
+            /* background-color: plum; */
+             /* margin-top: 100px;  */
             height: auto;
+            /* margin-left: 50px; */
             padding-bottom: 10px;
             font-family: 'Cantarell', sans-serif;
             position: absolute;
             z-index: 100;
+
         }
 
-        #table_body,
-        th,
-        #table_body_counter,
-        #table_body_firstfive,
-        #match {
+        #table_body, th, #table_body_counter, #table_body_firstfive, #match {
             font-size: 22px;
             color: purple
         }
+
+
 
         #b1 {
 
@@ -43,10 +45,11 @@
 
         .bg-dark {
             background-color: purple !important;
+            /* color:gold !important; */
         }
 
         .nav-link {
-            color: white !important;
+            color: white!important;
             font-size: 20px;
         }
 
@@ -56,36 +59,34 @@
             margin-top: 50px;
             margin-left: 650px;
         }
-
-        .navbar-brand {
+        .navbar-brand{
             color: white !important;
         }
+        body{
 
-        body {
-
-            background: url(dog1.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
+            background:url(dog1.jpg);
+              background-repeat: no-repeat;
+               background-size: cover; 
         }
-
-        #mainDiv1 {
+        #mainDiv1{
 
             font-size: 25px;
             color: purple;
 
         }
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
-
+<body >
+  
     <div class="mainDiv121">
-
+       
         <nav class="navbar navbar-expand-md bg-dark navbar-dark ">
             <a class="navbar-brand" href="index.html">Pet Shop</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -190,19 +191,18 @@
 
 
         <div style="display: none;" id="enquiry-form" class="row">
-            <div>
+            <div class="col-md-12">
 
                 <form onsubmit="insertformSubmit(event)">
                     <div class="form-group">
                         <label style="font-size: 22px; color: purple;">Enter pets</label>
-                        <input type="text" style="font-size: 22px; color: purple;" class="form-control"
-                            placeholder="Enter Which Type Of Pet You Want ?" id="pets_types" required>
+                        <input type="text" style="font-size: 22px; color: purple;"   class="form-control" placeholder="Enter Which Type Of Pet You Want ?" id="pets_types" required>
                     </div>
 
 
 
-                    <button id="enquiry_submit" type="button" onclick="insertEnquirePets(event)" class="btn btn-primary"
-                        style="font-size: 22px;">Enquire</button>
+                    <button id="enquiry_submit" type="button" onclick="insertEnquirePets(event)"
+                        class="btn btn-primary" style="font-size: 22px;">Enquire</button>
                 </form>
             </div>
         </div>
@@ -216,7 +216,7 @@
 
 
         <div style="display: none;" class="row" id="petsCountTable">
-            <div>
+            <div class="col-md-12">
                 <h3 style="text-align: center;">Pets Count</h3>
                 <div class="table-responsive">
                     <table class="table table-bordered">
@@ -237,7 +237,7 @@
 
 
         <div style="display: none;" class="row" id="firstfive">
-            <div>
+            <div class="col-md-12">
                 <h3 style="text-align: center;">First 5 customer enquiry status</h3>
                 <div class="table-responsive">
                     <table class="table table-bordered">

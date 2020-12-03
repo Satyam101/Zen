@@ -77,7 +77,6 @@ class tv {
 
 
 let videos: string[] = [
-    
     "https://www.mobiles24.co/metapreview.php?id=628470&cat=106&h=13512105",
     "https://www.mobiles24.co/metapreview.php?id=630849&cat=106&h=13563254",
     "https://www.mobiles24.co/metapreview.php?id=629194&cat=106&h=13527671",

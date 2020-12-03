@@ -99,7 +99,7 @@ class PetRequest {
         for (let req123 of requests) {
 
             let flag = false;
-            for (let pet1=0;pet1 < req123.length;pet1++){  // of req123) {
+            for (let pet1 of req123) {
                 if (petList.includes(pet1)) {
 
                     flag = true;
