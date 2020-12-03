@@ -3,7 +3,7 @@
 
 var rows = 1;
 
-var entry = document.getElementById("button1");
+// var entry = document.getElementById("button1");
 // entry.addEventListener("click", displayDetails());
 function displayDetails() {
     event.preventDefault();
@@ -57,13 +57,13 @@ function GetSelected() {
     
     var chks = checks.getElementsByTagName("input");
 
-    
+    // console.log(chks.length)
     for (var i = 0; i < chks.length; i++) {
+
         if (chks[i].checked) {
             selected.push(chks[i].value);
         }
     }
-
  
     if (selected.length >= 2) {
         arr = selected.join(",");

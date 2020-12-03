@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+
+                    <div class="form-group">
+                        <label for="reference">Referal Name</label>
+                        <input type="text" id="reference" class="form-control" name="reference">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nameOFTheReferal">Name</label>
+                        <input type="text" name="nameOFTheReferal" id="nameOFTheReferal" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="validDocument">Valid Doc</label>
+                        <select name="validDocument" id="validDocument" class="custom-select">
+                            <option value="valid">valid</option>
+                            <option value="mismatch">mismatch</option>
+                            <option value="wrong">wrong</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aadharID">Aadhar Number</label>
+                        <input type="text" id="aadharID" class="form-control" name="aadharID">
+                    </div>
+
+                    <button type="button" class="btn btn-primary" id="details-emp">Submit</button>
+
+                </div>
+                <div class="col"></div>
+
+            </div>
+        </form>
+
+    </div>
+
+    <script src="public/bundle.js"></script>
+</body>
+
+</html>

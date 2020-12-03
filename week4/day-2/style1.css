@@ -1,17 +1,37 @@
 
-body{
-  background-color: rosybrown;
-}
+
 .main{
-background-color:yellow; 
 width: fit-content;
  margin-left: 300px;
+ background-color:sandybrown;
   margin-top: px;
    padding-left: 50px;
     padding-right: 10px; 
     padding-bottom: 3px;
      width:950px;
       padding-top: 30px;
+}
+body {
+  background: linear-gradient(to right,deeppink,rgba(245, 245, 11, 0.884));
+
+  animation: backgroundAnimation 5s ease infinite;
+  background-size: 200% 200%  ;
+
+}
+
+@keyframes backgroundAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+
 }
 
 .awesome {
@@ -51,15 +71,15 @@ width: fit-content;
     background-color: dodgerblue;
     font-style: normal;
     background-color: navy;
-    color: wheat;
+    color: white;
     border-radius: 1cm;
    outline: none;
   }
   #display{
 
     border-collapse: collapse;
-    width: 50%;
-    margin-left: 380px;
+    width: 67.3%;
+    margin-left: 300px;
     margin-top: 20px;
     background-color:silver;
     padding: 5px;

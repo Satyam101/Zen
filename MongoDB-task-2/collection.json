@@ -1,0 +1,205 @@
+
+//for users
+[
+    
+    {
+        "user_name":"user-1",
+        "roll_no": 100,
+        "address":"Pune"
+    },
+    {
+        "user_name":"user-2",
+        "roll_no": 200,
+        "address":"Mumbai"
+    },
+    {
+        "user_name":"user-3",
+        "roll_no": 300,
+        "address":"chennai"
+    },
+    {
+        "user_name":"user-4",
+        "roll_no": 400,
+        "address":"banglore"
+    },
+    {
+        "user_name":"user-5",
+        "roll_no": 500,
+        "address":"hyderabad"
+    }
+
+
+]
+
+//for codekata
+
+[
+    {
+        "user_name":"user-1",
+        "problem_solved":20
+    },
+    {
+        "user_name":"user-2",
+        "problem_solved":7
+    },
+    {
+        "user_name":"user-3",
+        "problem_solved":22
+    },
+    {
+        "user_name":"user-4",
+        "problem_solved":13
+    },
+    {
+        "user_name":"user-5",
+        "problem_solved":26
+    }
+]
+
+// for attendance
+[
+
+    {
+        "user_name":"user-1",
+        "user_status":"absent"
+    },
+    {
+        "user_name":"user-2",
+        "user_status":"present"
+    },
+    {
+        "user_name":"user-3",
+        "user_status":"absent"
+    },
+    {
+        "user_name":"user-4",
+        "user_status":"absent"
+    },
+    {
+        "user_name":"user-5",
+        "user_status":"present"
+    }
+    
+
+]
+
+// for topic
+
+[
+
+    {
+        "topic_name":"DSA",
+        "topic_taught_month":"december",
+    },
+    {
+        "topic_name":"java",
+        "topic_taught_month":"october",
+    },
+    {
+        "topic_name":"python",
+        "topic_taught_month":"september",
+    },
+    {
+        "topic_name":"javascript",
+        "topic_taught_month":"october",
+    },
+    {
+        "topic_name":"nodejs",
+        "topic_taught_month":"january",
+    },
+    
+
+]
+
+// for tasks
+
+[
+    {
+        "task_name": "PAN card Form",
+        "date":"23-oct-2020",
+        "month":"october"
+    },
+    {
+        "task_name": "RESUME Creation",
+        "date":"23-june-2020",
+        "month":"june"
+    },
+    {
+        "task_name": "Newspaper style",
+        "date":"23-oct-2020",
+        "month":"october"
+    },
+    {
+        "task_name": "submit Form",
+        "date":"28-oct-2020",
+        "month":"october"
+    },
+    {
+        "task_name": "typescript Form",
+        "date":"22-oct-2020",
+        "month":"october"
+    },
+    
+
+]
+
+//for company drives
+[
+    {
+        "date":"16-10-2020",
+        "company_name":"cognizant",
+        "student_name":"user-1"
+    },
+    {
+        "date":"19-10-2020",
+        "company_name":"accenture",
+        "student_name":"user-2"
+    },
+    {
+        "date":"8-10-2020",
+        "company_name":"infosys",
+        "student_name":"user-3"
+    },
+    {
+        "date":"6-10-2020",
+        "company_name":"tcs",
+        "student_name":"user-4"
+    },
+    {
+        "date":"30-10-2020",
+        "company_name":"google",
+        "student_name":"user-5"
+    },
+    
+]
+
+//for mentors
+
+[
+    {
+        "mentor_name":"ramesh",
+        "mentee_count":15,
+
+    },
+    {
+        "mentor_name":"suresh",
+        "mentee_count":13,
+
+    },
+    {
+        "mentor_name":"vijay",
+        "mentee_count":22,
+
+    },
+    {
+        "mentor_name":"radha",
+        "mentee_count":31,
+
+    },
+    {
+        "mentor_name":"krishna",
+        "mentee_count":28,
+
+    },
+    
+]

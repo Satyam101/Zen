@@ -8,7 +8,7 @@
     mainDiv.appendChild(form2);
 
     var table1=document.createElement("table");
-    table1.setAttribute("border","0");
+    table1.setAttribute("border","0 ");
     table1.setAttribute("id","FormData");
     form2.appendChild(table1);
     
